@@ -1,0 +1,17 @@
+[2026-06-02 13:00:55] ==========================================
+[2026-06-02 13:00:55]   BACKEND DEPLOYMENT STARTED
+[2026-06-02 13:00:55]   Log:            /opt/deployment/logs/backend-20260602_130055.log
+[2026-06-02 13:00:55]   Migration log:  /opt/deployment/logs/migration-20260602_130055.txt
+[2026-06-02 13:00:55] ==========================================
+[2026-06-02 13:00:55] Setting up SSH agent...
+Identity added: /home/sai/.ssh/keys/github-key-pem (sai.sannidh@arpaerp.com)
+[2026-06-02 13:00:55] ✅ SSH agent ready
+[2026-06-02 13:00:55] Cloning backend repo (branch: Feature_MigrationTestingWithDll)...
+Cloning into '/tmp/deployment/backend'...
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2026-06-02 13:01:05] Cleaning up...
+[2026-06-02 13:01:05] Cleanup done

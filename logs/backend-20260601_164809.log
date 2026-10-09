@@ -1,0 +1,9 @@
+[2026-06-01 16:48:09] ==========================================
+[2026-06-01 16:48:09]   BACKEND DEPLOYMENT STARTED
+[2026-06-01 16:48:09]   Log: /opt/deployment/logs/backend-20260601_164809.log
+[2026-06-01 16:48:09] ==========================================
+[2026-06-01 16:48:09] Setting up SSH agent...
+/root/.ssh/keys/github-key-pem: No such file or directory
+[2026-06-01 16:48:09] ❌ Failed to load SSH key: /root/.ssh/keys/github-key-pem
+[2026-06-01 16:48:09] Cleaning up...
+[2026-06-01 16:48:09] Cleanup done

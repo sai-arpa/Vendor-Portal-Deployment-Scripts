@@ -1,0 +1,10 @@
+[2026-10-09 15:02:50] ==========================================
+[2026-10-09 15:02:50]   GLOBALDATA SQL RUNNER STARTED
+[2026-10-09 15:02:50]   Env file:   /opt/deployment/.env.backend
+[2026-10-09 15:02:50]   Database:   test
+[2026-10-09 15:02:50]   Client:     RealDeals.sql
+[2026-10-09 15:02:50]   Log:        /opt/deployment/logs/globaldata-20261009_150250.log
+[2026-10-09 15:02:50] ==========================================
+[2026-10-09 15:02:50] Setting up SSH agent...
+/home/sai/.ssh/keys/github-pem: No such file or directory
+[2026-10-09 15:02:50] ❌ Failed to load SSH key: /home/sai/.ssh/keys/github-pem

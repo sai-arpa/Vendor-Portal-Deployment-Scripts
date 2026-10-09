@@ -1,0 +1,10 @@
+[2026-07-15 13:34:03] ==========================================
+[2026-07-15 13:34:03]   BACKEND DEPLOYMENT STARTED
+[2026-07-15 13:34:03]   Log:            /opt/deployment/logs/backend-20260715_133403.log
+[2026-07-15 13:34:03]   Migration log:  /opt/deployment/logs/migration-20260715_133403.txt
+[2026-07-15 13:34:03] ==========================================
+[2026-07-15 13:34:03] Setting up SSH agent...
+/home/sai/.ssh/keys/github-key-pem: No such file or directory
+[2026-07-15 13:34:03] ❌ Failed to load SSH key: /home/sai/.ssh/keys/github-key-pem
+[2026-07-15 13:34:03] Cleaning up...
+[2026-07-15 13:34:03] Cleanup done

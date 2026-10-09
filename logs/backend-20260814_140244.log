@@ -1,0 +1,785 @@
+[2026-08-14 14:02:44] ==========================================
+[2026-08-14 14:02:44]   BACKEND DEPLOYMENT STARTED
+[2026-08-14 14:02:44]   Log:            /opt/deployment/logs/backend-20260814_140244.log
+[2026-08-14 14:02:44]   Migration log:  /opt/deployment/logs/migration-20260814_140244.txt
+[2026-08-14 14:02:44] ==========================================
+[2026-08-14 14:02:44] Setting up SSH agent...
+Identity added: /home/sai/.ssh/keys/github-key (sai.sannidh@arpaerp.com)
+[2026-08-14 14:02:44] ✅ SSH agent ready
+[2026-08-14 14:02:44] Cloning backend repo (branch: Develop)...
+Cloning into '/tmp/deployment/backend'...
+[2026-08-14 14:02:51] ✅ Repo cloned
+[2026-08-14 14:02:51] Pinning .NET SDK to version 8...
+[2026-08-14 14:02:51] ✅ SDK pinned to .NET 8
+[2026-08-14 14:02:51] Building and publishing .NET app...
+  Determining projects to restore...
+  Restored /tmp/deployment/backend/Core/eProcurement.Core.csproj (in 1.24 sec).
+  Restored /tmp/deployment/backend/ERPLighthouseIntegration/eProcurement.ERPLighthouseIntegration.csproj (in 1.24 sec).
+  Restored /tmp/deployment/backend/ERPIntegration/eProcurement.ERPIntegration.csproj (in 1.24 sec).
+  Restored /tmp/deployment/backend/MigrationVerifier/eProcurement.MigrationVerifier.csproj (in 1.27 sec).
+  Restored /tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj (in 1.28 sec).
+  Restored /tmp/deployment/backend/Api/eProcurement.Api.csproj (in 1.32 sec).
+  eProcurement.ERPIntegration -> /tmp/deployment/backend/ERPIntegration/bin/Release/net8.0/eProcurement.ERPIntegration.dll
+/tmp/deployment/backend/ERPLighthouseIntegration/Connections/LighthouseOracleConnectionFactory.cs(55,16): warning CS8603: Possible null reference return. [/tmp/deployment/backend/ERPLighthouseIntegration/eProcurement.ERPLighthouseIntegration.csproj]
+/tmp/deployment/backend/ERPLighthouseIntegration/Repositories/LighthouseIndentRepository.cs(45,16): warning CS8603: Possible null reference return. [/tmp/deployment/backend/ERPLighthouseIntegration/eProcurement.ERPLighthouseIntegration.csproj]
+/tmp/deployment/backend/ERPLighthouseIntegration/Repositories/LighthousePoRepository.cs(43,16): warning CS8603: Possible null reference return. [/tmp/deployment/backend/ERPLighthouseIntegration/eProcurement.ERPLighthouseIntegration.csproj]
+  eProcurement.ERPLighthouseIntegration -> /tmp/deployment/backend/ERPLighthouseIntegration/bin/Release/net8.0/eProcurement.ERPLighthouseIntegration.dll
+CSC : warning CS2002: Source file '/tmp/deployment/backend/Core/Models/Globaldata/ExpenditureTypeDataModel.cs' specified multiple times [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Abstractions/Repositories/Master/IWarehouseRepository.cs(4,7): warning CS0105: The using directive for 'eProcurement.Core.Models.Shared' appeared previously in this namespace [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(2,7): warning CS0105: The using directive for 'Core' appeared previously in this namespace [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(24,7): warning CS0105: The using directive for 'eProcurement.Core.Extensions.Shared' appeared previously in this namespace [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(34,7): warning CS0105: The using directive for 'eProcurement.Core.Models.Utility' appeared previously in this namespace [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Abstractions/Services/Purchase/IRfqCoreService.cs(33,16): warning CS0108: 'IRfqCoreService.ChangeDocStatusAsync(int, bool, DateTimeOffset?, short, CancellationToken)' hides inherited member 'IDocumentActionCoreService.ChangeDocStatusAsync(int, bool, DateTimeOffset?, short, CancellationToken)'. Use the new keyword if hiding was intended. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/DocType.cs(39,118): warning CS8625: Cannot convert null literal to non-nullable reference type. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Master/TermsNConditionHeadDataModel.cs(33,17): warning CS0108: 'TermsNConditionHeadGetByIdDataModel.IsCompulsory' hides inherited member 'TermsNConditionHeadBaseDataModel.IsCompulsory'. Use the new keyword if hiding was intended. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(994,23): warning CS8767: Nullability of reference types in type of parameter 'insertionLevel' of 'Task PurchaseOrderCoreService.InsertIntoErpAsync(int purchaseOrderId, short? completedApprovalLevel, bool isAuthorizeTrigger, short docStatusId, string insertionLevel, IErpIntegrationService erpIntegrationService, CancellationToken cancellationToken = default(CancellationToken))' doesn't match implicitly implemented member 'Task IFormErpInsertCoreService.InsertIntoErpAsync(int docId, short? completedApprovalLevel, bool isAuthorizeTrigger, short docStatusId, string? insertionLevel, IErpIntegrationService erpIntegrationService, CancellationToken cancellationToken = default(CancellationToken))' (possibly because of nullability attributes). [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'FinancialYear' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'Company' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'DocType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'DocumentStatus' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'BudgetType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'CreatedUser' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(12,12): warning CS8618: Non-nullable property 'Status' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'FinancialYear' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'Company' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'DocType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'DocumentStatus' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'BudgetType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'CreatedUser' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Finance/BudgetMain.cs(14,12): warning CS8618: Non-nullable property 'Status' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EVendor.cs(9,23): warning CS8618: Non-nullable property 'VendorName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EUnit.cs(8,23): warning CS8618: Non-nullable property 'UnitName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EUnit.cs(9,23): warning CS8618: Non-nullable property 'Alias' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ETncHead.cs(9,23): warning CS8618: Non-nullable property 'TermsNConditionHeadName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ESubgroup.cs(8,23): warning CS8618: Non-nullable property 'SubgroupName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ESubgroup.cs(10,23): warning CS8618: Non-nullable property 'Alias' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Purchase/QuotationTermsConditionDetail.cs(9,12): warning CS8618: Non-nullable property 'TncValue' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EState.cs(8,23): warning CS8618: Non-nullable property 'StateName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ERegion.cs(9,23): warning CS8618: Non-nullable property 'RegionName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EPriorityMaster.cs(8,23): warning CS8618: Non-nullable property 'PriorityName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EMake.cs(8,23): warning CS8618: Non-nullable property 'MakeName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Utility/ScheduledMessage.cs(22,31): warning CS8618: Non-nullable property 'NotificationAction' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Utility/ScheduledMessage.cs(23,29): warning CS8618: Non-nullable property 'NotificationRule' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EGroup.cs(8,23): warning CS8618: Non-nullable property 'GroupName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EGroup.cs(10,23): warning CS8618: Non-nullable property 'Alias' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EDivision.cs(8,23): warning CS8618: Non-nullable property 'DivisionName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/EDepartment.cs(8,23): warning CS8618: Non-nullable property 'DepartmentName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECurrency.cs(8,23): warning CS8618: Non-nullable property 'CurrencyName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECurrency.cs(9,23): warning CS8618: Non-nullable property 'Notation' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECountry.cs(8,23): warning CS8618: Non-nullable property 'CountryName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECostCenter.cs(9,17): warning CS8618: Non-nullable property 'CostCenterName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECity.cs(8,23): warning CS8618: Non-nullable property 'CityName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECategory.cs(8,23): warning CS8618: Non-nullable property 'CategoryName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/ERP/ErpMaster/ECategory.cs(9,23): warning CS8618: Non-nullable property 'Alias' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/TransactionBaseEntity.cs(14,20): warning CS8618: Non-nullable property 'DocType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/TransactionBaseEntity.cs(17,21): warning CS8618: Non-nullable property 'Division' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/TransactionBaseEntity.cs(20,27): warning CS8618: Non-nullable property 'DocSeries' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/TransactionBaseEntity.cs(24,27): warning CS8618: Non-nullable property 'DocumentStatus' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/TransactionBaseEntity.cs(27,20): warning CS8618: Non-nullable property 'Company' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/TransactionBaseEntity.cs(30,26): warning CS8618: Non-nullable property 'FinancialYear' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/ErpMasterBaseEntity.cs(9,23): warning CS8618: Non-nullable property 'Code' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Shared/ErpMasterBaseEntity.cs(10,23): warning CS8618: Non-nullable property 'ErpUniqueValue' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Utility/DocumentAttachmentGetByIdDataModel.cs(28,23): warning CS8618: Non-nullable property 'Pathname' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Utility/DocumentAttachmentGetByIdDataModel.cs(29,23): warning CS8618: Non-nullable property 'FileName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Utility/DocumentAttachmentGetByIdDataModel.cs(30,23): warning CS8618: Non-nullable property 'FileType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/ContactValidation.cs(34,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/VendorRegistrationLocationDetail.cs(67,13): warning CS8618: Non-nullable property 'ContactNo' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/VendorRegistrationLocationDetail.cs(67,13): warning CS8618: Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Security/User.cs(64,12): warning CS8618: Non-nullable property 'UserType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Security/User.cs(119,12): warning CS8618: Non-nullable property 'UserType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Security/UserDataModel.cs(69,32): warning CS8618: Non-nullable property 'Department' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Security/UserDataModel.cs(64,30): warning CS8618: Non-nullable property 'Division' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Utility/DocumentAttachment.cs(35,17): warning CS8618: Non-nullable property 'AttachmentContext' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Utility/DocumentAttachment.cs(35,17): warning CS8618: Non-nullable property 'Status' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Models/Notification/DeliveryResult.cs(14,23): warning CS8618: Non-nullable property 'ErrorMessage' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/VendorLocationAttachmentDetail.cs(22,13): warning CS8618: Non-nullable property 'DocumentAttachment' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/VendorLocationAttachmentDetail.cs(22,13): warning CS8618: Non-nullable property 'VendorAttachment' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/VendorLocationAttachmentDetail.cs(26,12): warning CS8618: Non-nullable property 'DocumentAttachment' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/VendorLocationAttachmentDetail.cs(26,12): warning CS8618: Non-nullable property 'VendorAttachment' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Utility/DocumentAttachment.cs(38,16): warning CS8618: Non-nullable property 'AttachmentContext' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Utility/DocumentAttachment.cs(38,16): warning CS8618: Non-nullable property 'Status' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/PasswordEncryptionService.cs(15,16): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/PasswordEncryptionService.cs(16,15): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/PasswordEncryptionService.cs(13,12): warning CS8618: Non-nullable field '_key' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/PasswordEncryptionService.cs(13,12): warning CS8618: Non-nullable field '_iv' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/PasswordEncryptionService.cs(23,20): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/PasswordEncryptionService.cs(46,20): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(67,63): warning CS9124: Parameter 'IPurchaseRequestRepository repository' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(77,74): warning CS9124: Parameter 'IPortalSettingsCoreService portalSettingsService' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/Db.cs(7,23): warning CS8618: Non-nullable property 'DbName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/Db.cs(8,23): warning CS8618: Non-nullable property 'Code' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/Db.cs(9,23): warning CS8618: Non-nullable property 'DbDescription' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/Db.cs(10,23): warning CS8618: Non-nullable property 'DbConnectionName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Reporting/ReportCoreService.cs(21,39): warning CS9113: Parameter 'object' is unread. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Security/AuthCoreService.cs(170,67): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Security/AuthCoreService.cs(182,92): warning CS8604: Possible null reference argument for parameter 'password' in 'Task<UserInfoDataModel?> IUserCoreService.CheckUserExists(string email, string password)'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Security/AuthCoreService.cs(224,80): warning CS8604: Possible null reference argument for parameter 'password' in 'Task<UserInfoDataModel?> IUserCoreService.CheckUserExists(string email, string password)'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Security/UserCoreService.cs(122,16): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(482,55): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(482,55): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(526,76): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(538,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(538,42): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Entities/Master/Make.cs(13,12): warning CS8618: Non-nullable property 'Alias' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/NotificationRecipientResolver.cs(24,32): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Shared/NotificationRecipientResolver.cs(33,66): warning CS8604: Possible null reference argument for parameter 'Cc' in 'ResolvedRecipients.ResolvedRecipients(string To, string Cc)'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/StateCoreService.cs(57,16): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/VendorRegistrationCoreService.cs(141,75): warning CS8620: Argument of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string propertyName)>' cannot be used for parameter 'contacts' of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)>' in 'Task<List<ValidationFailure>> IContactValidation.Validate(List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)> contacts)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(830,67): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(842,122): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(842,86): warning CS8604: Possible null reference argument for parameter 'entityCode' in 'Task<(List<ErpAvailableStockData> AvailableStock, List<ErpMaxStockData> MaxStock, List<ErpPendingPoData> PendingPo)> IErpIntegrationService.GetErpStockPositionAsync(List<string> itemCodes, string entityCode, string divCode, string yearName, string dbConnectionName, string dbName, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(842,122): warning CS8604: Possible null reference argument for parameter 'dbConnectionName' in 'Task<(List<ErpAvailableStockData> AvailableStock, List<ErpMaxStockData> MaxStock, List<ErpPendingPoData> PendingPo)> IErpIntegrationService.GetErpStockPositionAsync(List<string> itemCodes, string entityCode, string divCode, string yearName, string dbConnectionName, string dbName, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(842,145): warning CS8604: Possible null reference argument for parameter 'dbName' in 'Task<(List<ErpAvailableStockData> AvailableStock, List<ErpMaxStockData> MaxStock, List<ErpPendingPoData> PendingPo)> IErpIntegrationService.GetErpStockPositionAsync(List<string> itemCodes, string entityCode, string divCode, string yearName, string dbConnectionName, string dbName, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/AuctionCoreService.cs(457,70): warning CS8620: Argument of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string propertyName)>' cannot be used for parameter 'contacts' of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)>' in 'Task<List<ValidationFailure>> IContactValidation.Validate(List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)> contacts)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(943,108): warning CS8604: Possible null reference argument for parameter 'dbName' in 'Task<List<ERPDivEntityWiseStock>> IErpIntegrationService.GetDivisionEntityWiseStockForItem(string dbConnectionName, string dbName, List<string> itemCodes, string entityCode, string divisionCode, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Inventory/PurchaseRequestCoreService.cs(943,163): warning CS8604: Possible null reference argument for parameter 'divisionCode' in 'Task<List<ERPDivEntityWiseStock>> IErpIntegrationService.GetDivisionEntityWiseStockForItem(string dbConnectionName, string dbName, List<string> itemCodes, string entityCode, string divisionCode, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Utility/DocumentAttachmentCoreService.cs(124,74): warning CS8604: Possible null reference argument for parameter 'formCode' in 'Task<Dictionary<int, bool>> IDocumentAttachmentRepository.IsAttachmentExist(string formCode, List<int> headerIds)'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/DocumentSeriesCoreService.cs(71,34): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<IGrouping<int, DocumentSeriesCompanyDetail>> Enumerable.GroupBy<DocumentSeriesCompanyDetail, int>(IEnumerable<DocumentSeriesCompanyDetail> source, Func<DocumentSeriesCompanyDetail, int> keySelector)'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/DocumentSeriesCoreService.cs(78,34): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<IGrouping<int, DocumentSeriesDivisionDetail>> Enumerable.GroupBy<DocumentSeriesDivisionDetail, int>(IEnumerable<DocumentSeriesDivisionDetail> source, Func<DocumentSeriesDivisionDetail, int> keySelector)'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/DocumentSeriesCoreService.cs(167,32): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/DocumentSeriesCoreService.cs(360,17): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Master/DocumentSeriesCoreService.cs(363,15): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/ComparativeStatementCoreService.cs(173,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(78,74): warning CS9124: Parameter 'IPortalSettingsCoreService portalSettingsService' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCancellationCoreService.cs(154,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(116,70): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(117,21): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(124,25): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(338,64): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(362,70): warning CS8620: Argument of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string propertyName)>' cannot be used for parameter 'contacts' of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)>' in 'Task<List<ValidationFailure>> IContactValidation.Validate(List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)> contacts)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(370,13): warning CS0219: The variable 'form' is assigned but its value is never used [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Utility/ApprovalProcessCoreService.cs(820,23): warning CS8619: Nullability of reference types in value of type 'Dictionary<string, string?>' doesn't match target type 'IReadOnlyDictionary<string, string>'. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/QuotationCoreService.cs(821,117): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Utility/ApprovalProcessCoreService.cs(1069,87): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Utility/ApprovalProcessCoreService.cs(1070,83): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(801,50): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1024,55): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1024,55): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1044,67): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1088,76): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1100,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1100,42): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(377,70): warning CS8620: Argument of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string propertyName)>' cannot be used for parameter 'contacts' of type 'List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)>' in 'Task<List<ValidationFailure>> IContactValidation.Validate(List<(int contactCountryId, string contactNo, string fieldName, short? lineNo, string? propertyName)> contacts)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1634,13): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1663,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/PurchaseOrderCoreService.cs(1663,42): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(1150,40): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(1151,41): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(1697,57): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(1698,56): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+/tmp/deployment/backend/Core/Services/Purchase/RfqCoreService.cs(1699,59): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Core/eProcurement.Core.csproj]
+  eProcurement.Core -> /tmp/deployment/backend/Core/bin/Release/net8.0/eProcurement.Core.dll
+/tmp/deployment/backend/Infrastructure/Extensions/Utility/ServiceCollectionExtensions.cs(9,7): warning CS0105: The using directive for 'eProcurement.Infrastructure.Data.Interceptors' appeared previously in this namespace [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Extensions/Utility/ServiceCollectionExtensions.cs(10,7): warning CS0105: The using directive for 'eProcurement.Infrastructure.Services.Utility' appeared previously in this namespace [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/RfqRepository.cs(8,7): warning CS0105: The using directive for 'eProcurement.Core.Models.Master' appeared previously in this namespace [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Data/Interceptors/AuditSaveChangesInterceptor.cs(38,17): warning CS0184: The given expression is never of the provided ('AuditLog') type [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Extensions/Shared/QueryableFilterExtensions.cs(366,21): warning CS0219: The variable 'finalExpression' is assigned but its value is never used [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/VendorRelatedAnalyticsRepository.cs(43,21): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Services/Utility/EmailHealthCheckAdapter.cs(337,49): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/VendorRelatedAnalyticsRepository.cs(122,25): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/VendorRelatedAnalyticsRepository.cs(146,29): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/HeaderCardsRelatedAnalyticsRepository.cs(105,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/InventoryRelatedAnalyticsRepository.cs(142,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/InventoryRelatedAnalyticsRepository.cs(144,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/VendorRelatedAnalyticsRepository.cs(216,77): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/VendorRelatedAnalyticsRepository.cs(224,77): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/VendorRelatedAnalyticsRepository.cs(241,25): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Services/Master/CommonRepository.cs(120,35): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Services/Master/CommonRepository.cs(247,72): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Services/Master/CommonRepository.cs(483,55): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Services/Master/CommonRepository.cs(484,55): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Inventory/PurchaseRequestRepository.cs(812,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/PurchaseRelatedAnalyticsRepository.cs(348,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/PurchaseRelatedAnalyticsRepository.cs(349,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/PurchaseRelatedAnalyticsRepository.cs(349,100): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Analytics/PurchaseRelatedAnalyticsRepository.cs(349,30): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Inventory/PurchaseRequestRepository.cs(1557,35): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Inventory/PurchaseRequestRepository.cs(1565,35): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Utility/LandingPageRepository.cs(70,32): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Utility/LandingPageRepository.cs(116,32): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Utility/DocumentAttachmentRepository.cs(227,39): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(133,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(406,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(565,19): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(582,25): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(654,25): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(675,17): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(686,50): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(698,25): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(749,92): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Reporting/PrintRepository.cs(177,44): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Notification/NotificationRepository.cs(212,31): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/UserRepository.cs(875,16): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(97,24): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(120,29): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(112,40): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(112,40): warning CS8619: Nullability of reference types in value of type 'List<VendorLocationDetailDataModel>' doesn't match target type 'List<VendorLocationDetailDataModel?>'. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(133,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(134,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(142,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(143,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Utility/ApprovalProcessRepository.cs(903,34): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(217,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(221,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(232,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(236,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/RfqRepository.cs(228,30): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/RfqRepository.cs(329,46): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/TermsNConditionHeadRepository.cs(95,82): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/TermsNConditionHeadRepository.cs(95,120): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/TermsNConditionHeadRepository.cs(97,119): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/TermsNConditionHeadRepository.cs(97,158): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/TermsNConditionHeadRepository.cs(99,123): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/TermsNConditionHeadRepository.cs(99,162): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/SubgroupRepository.cs(112,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/SubgroupRepository.cs(113,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/SubgroupRepository.cs(118,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/SubgroupRepository.cs(119,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/RoleRepository.cs(53,20): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRepository.cs(101,47): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRepository.cs(112,13): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/MakeRepository.cs(35,21): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/MakeRepository.cs(70,26): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(58,21): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(74,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(75,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(83,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(84,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(175,53): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(370,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(374,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(385,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(389,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(441,33): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(433,44): warning CS8619: Nullability of reference types in value of type 'List<VendorLocationDetailDataModel>' doesn't match target type 'List<VendorLocationDetailDataModel?>'. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/GroupRepository.cs(99,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/GroupRepository.cs(100,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/GroupRepository.cs(106,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/GroupRepository.cs(107,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/LocationRepository.cs(291,25): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DocTypeRepository.cs(48,109): warning CS8604: Possible null reference argument for parameter 'statusRemarks' in 'void DocType.Update(string docTypeAlias, string docTypeName, short formId, short statusId, string statusRemarks = null)'. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Security/SupplierAccountRepository.cs(505,33): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DepartmentRepository.cs(94,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DepartmentRepository.cs(95,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DepartmentRepository.cs(103,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DepartmentRepository.cs(104,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/ItemRepository.cs(179,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/ItemRepository.cs(180,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/ItemRepository.cs(186,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/ItemRepository.cs(187,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DocTypeRepository.cs(119,29): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DocTypeRepository.cs(129,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DivisionRepository.cs(88,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DivisionRepository.cs(89,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DivisionRepository.cs(97,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DivisionRepository.cs(98,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(90,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(91,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(99,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(100,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/DocTypeRepository.cs(229,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CategoryRepository.cs(67,28): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CategoryRepository.cs(68,31): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CategoryRepository.cs(76,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CategoryRepository.cs(77,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(270,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(271,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(276,32): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CostCenterRepository.cs(277,35): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CompanyLocationRepository.cs(168,83): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CompanyLocationRepository.cs(169,117): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CompanyLocationRepository.cs(210,79): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CompanyLocationRepository.cs(211,113): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRepository.cs(636,36): warning CS0472: The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?' [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRepository.cs(741,52): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRepository.cs(745,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(21,46): warning CS9124: Parameter 'AppDbContext context' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/RfqRepository.cs(1479,75): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/CompanyRepository.cs(492,52): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRegistrationRepository.cs(691,34): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Master/VendorRegistrationRepository.cs(761,34): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(380,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(280,75): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(469,44): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(476,44): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(483,44): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(504,68): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(505,66): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(508,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(633,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(795,25): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(806,20): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(294,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(295,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(296,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(302,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(303,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(304,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(305,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(306,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(859,17): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(878,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(434,27): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1045,13): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(742,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(743,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(744,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(750,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(751,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(752,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(753,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(754,51): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1282,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1296,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1301,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1358,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1367,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1385,80): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1387,84): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1410,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1299,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1302,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1305,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1305,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1305,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1308,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1308,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1308,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1311,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1314,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1314,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1317,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1317,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1346,36): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1350,24): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1350,24): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1354,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(954,27): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1695,63): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/QuotationRepository.cs(1696,25): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(1386,33): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(1405,27): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1390,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1430,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1513,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(2150,60): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(2151,62): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1794,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1794,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1795,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1795,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1797,40): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1797,40): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1798,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1798,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1799,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1799,42): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1923,48): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1924,44): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(1925,45): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/ComparativeStatementRepository.cs(2101,42): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(2884,27): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(3156,29): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(3317,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(3354,39): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(3363,39): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(3604,65): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+/tmp/deployment/backend/Infrastructure/Repositories/Purchase/PurchaseOrderRepository.cs(3672,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Infrastructure/eProcurement.Infrastructure.csproj]
+  eProcurement.Infrastructure -> /tmp/deployment/backend/Infrastructure/bin/Release/net8.0/eProcurement.Infrastructure.dll
+  eProcurement.MigrationVerifier -> /tmp/deployment/backend/MigrationVerifier/bin/Release/net8.0/eProcurement.MigrationVerifier.dll
+CSC : warning CS2002: Source file '/tmp/deployment/backend/Api/Abstractions/Globaldata/IExpenditureTypeService.cs' specified multiple times [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+CSC : warning CS2002: Source file '/tmp/deployment/backend/Api/Controllers/Globaldata/ExpenditureTypeController.cs' specified multiple times [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+CSC : warning CS2002: Source file '/tmp/deployment/backend/Api/Models/GlobalData/ExpenditureTypeViewModel.cs' specified multiple times [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+CSC : warning CS2002: Source file '/tmp/deployment/backend/Api/Services/GlobalData/ExpenditureTypeService.cs' specified multiple times [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Master/TermsNConditionHeadViewModel.cs(34,17): warning CS0108: 'TermsNConditionHeadGetByIdViewModel.IsCompulsory' hides inherited member 'TermsNConditionHeadBaseViewModel.IsCompulsory'. Use the new keyword if hiding was intended. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/BackgroundJobs/VendorRatingJob.cs(30,26): warning CS0168: The variable 'ex' is declared but never used [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(18,20): warning CS8603: Possible null reference return. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(39,13): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(41,34): warning CS8620: Argument of type 'object?[]' cannot be used for parameter 'arguments' of type 'object[]' in 'object[] ServiceLoggingInterceptor.GetLoggableArguments(object[] arguments)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(63,13): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(65,34): warning CS8620: Argument of type 'object?[]' cannot be used for parameter 'arguments' of type 'object[]' in 'object[] ServiceLoggingInterceptor.GetLoggableArguments(object[] arguments)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(70,24): warning CS8600: Converting null literal or possible null value to non-nullable type. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Extensions/Scheduler/ServiceCollectionExtension.cs(15,17): warning CS0618: 'IServiceCollectionQuartzConfigurator.UseMicrosoftDependencyInjectionJobFactory(Action<JobFactoryOptions>?)' is obsolete: 'MicrosoftDependencyInjectionJobFactory is the default for DI configuration, this method will be removed later on' [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(92,13): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(94,34): warning CS8620: Argument of type 'object?[]' cannot be used for parameter 'arguments' of type 'object[]' in 'object[] ServiceLoggingInterceptor.GetLoggableArguments(object[] arguments)' due to differences in the nullability of reference types. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Middleware/ServiceLoggingInterceptor.cs(99,24): warning CS8600: Converting null literal or possible null value to non-nullable type. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Utility/DocumentUploadModel.cs(13,26): warning CS8618: Non-nullable property 'File' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Utility/DocumentAttachmentModel.cs(5,23): warning CS8618: Non-nullable property 'FileName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Auth/ForgotPasswordModel.cs(9,19): warning CS8618: Non-nullable property 'OtpSessionId' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Shared/DeleteReasonRequestModel.cs(5,23): warning CS8618: Non-nullable property 'DeleteReason' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Purchase/VendorPurchaseOrderSearchModels.cs(47,25): warning CS8618: Non-nullable property 'Items' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Purchase/RfqViewModels.cs(156,25): warning CS8618: Non-nullable property 'Items' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Reporting/ReportApiModels.cs(18,32): warning CS8618: Non-nullable property 'ReportInfo' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Startup.cs(259,48): warning CS8604: Possible null reference argument for parameter 'serviceType' in 'ServiceDescriptor.ServiceDescriptor(Type serviceType, Type implementationType, ServiceLifetime lifetime)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Startup.cs(259,68): warning CS8604: Possible null reference argument for parameter 'implementationType' in 'ServiceDescriptor.ServiceDescriptor(Type serviceType, Type implementationType, ServiceLifetime lifetime)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Auth/AuthService.cs(56,58): warning CS9124: Parameter 'IUserCoreService userCoreService' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Auth/AuthService.cs(58,60): warning CS9124: Parameter 'IJwtHelperService jwtHelperService' is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Purchase/QuotationViewModels.cs(276,25): warning CS8618: Non-nullable property 'Items' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Auth/AuthService.cs(39,20): warning CS9113: Parameter 'helperService' is unread. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Config/PortalSettingService.cs(97,46): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Purchase/PurchaseOrderSearchModels.cs(57,25): warning CS8618: Non-nullable property 'Items' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Finance/BudgetTransactionService.cs(296,21): warning CS8604: Possible null reference argument for parameter 'docNoYearly' in 'BudgetMain.BudgetMain(int id, string docNoYearly, int? docSequenceNo, DateOnly docDate, int? docSeriesId, int docTypeId, int companyId, int? divisionId, DateOnly validityFromDate, DateOnly validityToDate, short budgetTypeId, string? budgetDescription, decimal budgetAmount, int? approvalSetupId, short documentStatusId, short statusId)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/BusinessTypeService.cs(132,30): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(88,17): warning CS8604: Possible null reference argument for parameter 'displayDocNoYearly' in 'PurchaseRequest.PurchaseRequest(string displayDocNoYearly, string docNoYearly, int? docSequenceNo, DateOnly docDate, int? docSeriesId, int docTypeId, short documentStatusId, int companyId, int divisionId, int departmentId, short expenditureTypeId, string? refDocNo, DateOnly? refDocDate, string? requestedBy, string? requestedByContactNo, int? requestedByContactNoCountyId, string? requestedByEmail, decimal netAmount, int? erpSerialNoId, int? approvalSetupId, short statusId, string? remarks)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(89,17): warning CS8604: Possible null reference argument for parameter 'docNoYearly' in 'PurchaseRequest.PurchaseRequest(string displayDocNoYearly, string docNoYearly, int? docSequenceNo, DateOnly docDate, int? docSeriesId, int docTypeId, short documentStatusId, int companyId, int divisionId, int departmentId, short expenditureTypeId, string? refDocNo, DateOnly? refDocDate, string? requestedBy, string? requestedByContactNo, int? requestedByContactNoCountyId, string? requestedByEmail, decimal netAmount, int? erpSerialNoId, int? approvalSetupId, short statusId, string? remarks)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(174,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(183,148): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(211,18): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/ModelValidators/Finance/BudgetTransactionSaveModelValidator.cs(56,19): warning CS8622: Nullability of reference types in type of parameter 'details' of 'bool BudgetTransactionSaveModelValidator.ValidateDepartmentHierarchy(List<BudgetDepartmentDetailSaveModel> details)' doesn't match the target delegate 'Func<List<BudgetDepartmentDetailSaveModel>?, bool>' (possibly because of nullability attributes). [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/ModelValidators/Finance/BudgetTransactionSaveModelValidator.cs(62,30): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<(int DivisionId, int? DepartmentId)> Enumerable.Select<BudgetDepartmentDetailSaveModel, (int DivisionId, int? DepartmentId)>(IEnumerable<BudgetDepartmentDetailSaveModel> source, Func<BudgetDepartmentDetailSaveModel, (int DivisionId, int? DepartmentId)> selector)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/ModelValidators/Finance/BudgetTransactionSaveModelValidator.cs(68,30): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<int> Enumerable.Select<BudgetCostCenterDetailSaveModel, int>(IEnumerable<BudgetCostCenterDetailSaveModel> source, Func<BudgetCostCenterDetailSaveModel, int> selector)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/ModelValidators/Finance/BudgetTransactionSaveModelValidator.cs(74,30): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<int> Enumerable.Select<BudgetItemDetailSaveModel, int>(IEnumerable<BudgetItemDetailSaveModel> source, Func<BudgetItemDetailSaveModel, int> selector)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(239,17): warning CS8604: Possible null reference argument for parameter 'displayDocNoYearly' in 'PurchaseRequest.PurchaseRequest(int id, string displayDocNoYearly, string docNoYearly, DateOnly docDate, int? docSeriesId, int docTypeId, short documentStatusId, int companyId, int divisionId, int departmentId, short expenditureTypeId, string? refDocNo, DateOnly? refDocDate, string? requestedBy, string? requestedByContactNo, int? requestedByContactNoCountyId, string? requestedByEmail, decimal netAmount, int? erpSerialNoId, int? approvalSetupId, short statusId, string? remarks)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(240,17): warning CS8604: Possible null reference argument for parameter 'docNoYearly' in 'PurchaseRequest.PurchaseRequest(int id, string displayDocNoYearly, string docNoYearly, DateOnly docDate, int? docSeriesId, int docTypeId, short documentStatusId, int companyId, int divisionId, int departmentId, short expenditureTypeId, string? refDocNo, DateOnly? refDocDate, string? requestedBy, string? requestedByContactNo, int? requestedByContactNoCountyId, string? requestedByEmail, decimal netAmount, int? erpSerialNoId, int? approvalSetupId, short statusId, string? remarks)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(321,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(329,148): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(354,18): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(412,61): warning CS8600: Converting null literal or possible null value to non-nullable type. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(176,43): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(260,64): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Purchase/ComparativeStatementViewModels.cs(83,25): warning CS8618: Non-nullable property 'Items' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/DepartmentService.cs(238,55): warning CS8600: Converting null literal or possible null value to non-nullable type. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/DepartmentService.cs(247,95): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(311,43): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Inventory/PurchaseRequestService.cs(669,33): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(443,43): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Auth/AuthService.cs(520,65): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Master/DocumentAttachmentViewModel.cs(6,23): warning CS8618: Non-nullable property 'Pathname' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Master/DocumentAttachmentViewModel.cs(7,23): warning CS8618: Non-nullable property 'FileName' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Master/DocumentAttachmentViewModel.cs(8,23): warning CS8618: Non-nullable property 'FileType' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Models/Master/BusinessTypeViewModel.cs(31,26): warning CS8618: Non-nullable property 'ModifiedBy' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(600,26): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(624,27): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(591,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(591,101): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(665,71): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(665,102): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/PrCancellationService.cs(65,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/LandingPageService.cs(20,24): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/PrCancellationService.cs(94,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(871,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorService.cs(871,94): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/ApprovalProcessService.cs(24,23): warning CS9113: Parameter 'jwtHelperService' is unread. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/LandingPageService.cs(36,33): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/DocumentAttachmentService.cs(64,66): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/ApprovalProcessService.cs(97,44): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/ApprovalProcessService.cs(104,144): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(183,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(183,101): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(245,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/DocumentAttachmentService.cs(241,30): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(679,26): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(698,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(698,101): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(788,42): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(809,27): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(862,75): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(862,107): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(283,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(283,98): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/DocumentAttachmentService.cs(280,100): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Reporting/PrintService.cs(29,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/SupplierAccountService.cs(116,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/SupplierAccountService.cs(113,40): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/SupplierAccountService.cs(113,40): warning CS8619: Nullability of reference types in value of type 'List<VendorLocationDetailViewModel>' doesn't match target type 'List<VendorLocationDetailViewModel?>'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderCancellationService.cs(73,27): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<PurchaseOrderCancllationItemDetailViewModel> Enumerable.Select<PurchaseOrderCancllationItemDetailDataModel, PurchaseOrderCancllationItemDetailViewModel>(IEnumerable<PurchaseOrderCancllationItemDetailDataModel> source, Func<PurchaseOrderCancllationItemDetailDataModel, PurchaseOrderCancllationItemDetailViewModel> selector)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/DocumentAttachmentService.cs(326,47): warning CS8604: Possible null reference argument for parameter 'path' in 'DirectoryInfo Directory.CreateDirectory(string path)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/QuotationService.cs(158,81): warning CS8604: Possible null reference argument for parameter 'tncValue' in 'QuotationTermsConditionDetail.QuotationTermsConditionDetail(int tncHeadId, string tncValue)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(204,43): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(1279,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/SupplierAccountService.cs(241,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/SupplierAccountService.cs(238,44): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/SupplierAccountService.cs(238,44): warning CS8619: Nullability of reference types in value of type 'List<VendorLocationDetailViewModel>' doesn't match target type 'List<VendorLocationDetailViewModel?>'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/ComparativeStatementService.cs(844,13): warning CS8604: Possible null reference argument for parameter 'sorting' in 'Task<PagedResultDataModel<ComparativeStatementPendingApprovalDataModel>> IComparativeStatementRepository.GetPendingApprovalsAsync(IntegerFilter? docTypeId, StringFilter? docNoYearly, IntegerFilter? refDocTypeId, StringFilter? itemName, int? companyId, int assignedToId, DateFilter? docDate, DateFilter? validityDate, DateTimeFilter? assignedDate, DateTimeFilter? createdDate, short statusId, int pageNo, int pageSize, string sorting, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/QuotationService.cs(338,81): warning CS8604: Possible null reference argument for parameter 'tncValue' in 'QuotationTermsConditionDetail.QuotationTermsConditionDetail(int tncHeadId, string tncValue)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderCancellationService.cs(344,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(395,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(395,101): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(404,26): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(428,71): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(428,103): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(454,75): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(454,106): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(475,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(482,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Security/UserService.cs(488,26): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Utility/DocumentAttachmentService.cs(440,30): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderCancellationService.cs(417,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/ComparativeStatementService.cs(993,30): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/QuotationService.cs(574,34): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/ComparativeStatementService.cs(1065,75): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/ComparativeStatementService.cs(1073,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/QuotationService.cs(723,55): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderCancellationService.cs(480,38): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderCancellationService.cs(484,47): warning CS8604: Possible null reference argument for parameter 'source' in 'IEnumerable<int> Enumerable.Select<PurchaseOrderCancellationPrDetailDataModel, int>(IEnumerable<PurchaseOrderCancellationPrDetailDataModel> source, Func<PurchaseOrderCancellationPrDetailDataModel, int> selector)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(276,75): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(276,106): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(344,83): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/ModelValidators/Master/TaxModelValidator.cs(29,9): warning CS0618: 'DefaultValidatorExtensions.ScalePrecision<T>(IRuleBuilder<T, decimal?>, int, int, bool)' is obsolete: 'Please use the PrecisionScale method instead, which takes precision as the first parameter and scale as the second. See https://github.com/FluentValidation/FluentValidation/issues/2030 for further details' [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(628,43): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(716,40): warning CS8604: Possible null reference argument for parameter 'to' in 'Task TemporaryMailSender.SendMailAsync(string to, string subject, string body)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/AuctionService.cs(474,67): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/AuctionService.cs(474,101): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/AuctionService.cs(620,79): warning CS8604: Possible null reference argument for parameter 'phoneCode' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/AuctionService.cs(620,111): warning CS8604: Possible null reference argument for parameter 'contactNo' in 'string IContactValidation.GetContactNoLocal(string phoneCode, string contactNo)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/QuotationService.cs(1485,53): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(1595,13): warning CS8604: Possible null reference argument for parameter 'sorting' in 'Task<PagedResultDataModel<RfqPendingApprovalDataModel>> IRfqRepository.GetPendingApprovalsAsync(IntegerFilter? docTypeId, StringFilter? docNoYearly, IntegerFilter? refDocTypeId, StringFilter? itemName, int? companyId, int assignedToId, DateFilter? docDate, DateTimeFilter? dueDate, bool? isPriceList, DateTimeFilter? assignedDate, DateTimeFilter? createdDate, short statusId, bool isAudit, int pageNo, int pageSize, string sorting, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(753,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(775,41): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(805,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(1807,75): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(1807,29): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(1813,78): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/RfqService.cs(1813,29): warning CS8601: Possible null reference assignment. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(638,33): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/AuctionService.cs(876,13): warning CS8604: Possible null reference argument for parameter 'sorting' in 'Task<PagedResultDataModel<AuctionPendingApprovalDataModel>> IAuctionRepository.GetPendingApprovalsAsync(IntegerFilter? docTypeId, StringFilter? docNoYearly, ShortFilter? auctionTypeId, IntegerFilter? refDocTypeId, StringFilter? itemName, int? companyId, int assignedToId, DateFilter? docDate, DateTimeFilter? startAt, DateTimeFilter? endAt, DateTimeFilter? assignedDate, DateTimeFilter? createdDate, short statusId, bool isAudit, int pageNo, int pageSize, string sorting, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Master/VendorRegistrationService.cs(917,45): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1478,60): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1492,148): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1517,18): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1611,56): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1625,144): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1648,18): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1667,59): warning CS8600: Converting null literal or possible null value to non-nullable type. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1679,71): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1811,30): warning CS8604: Possible null reference argument for parameter 'source' in 'bool Enumerable.Any<PurchaseOrderItemDetailSaveModel>(IEnumerable<PurchaseOrderItemDetailSaveModel> source, Func<PurchaseOrderItemDetailSaveModel, bool> predicate)'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(1942,29): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(2032,33): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(2403,13): warning CS8604: Possible null reference argument for parameter 'sorting' in 'Task<PagedResultDataModel<PurchaseOrderPendingApprovalDataModel>> IPurchaseOrderRepository.GetApprovalsAsync(IntegerFilter? docTypeId, StringFilter? docNoYearly, StringFilter? displayDocNoYearly, DateFilter? docDate, StringFilter? itemName, int? companyId, int? divisionId, int? refDocTypeId, int? departmentId, int? vendorId, int? vendorLocationId, int? freightTypeId, DecimalFilter? netAmount, int assignedToId, DateTimeFilter? assignedDate, DateTimeFilter? createdDate, short statusId, bool isAudit, int pageNo, int pageSize, string sorting, CancellationToken cancellationToken = default(CancellationToken))'. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(2590,22): warning CS8602: Dereference of a possibly null reference. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+/tmp/deployment/backend/Api/Services/Purchase/PurchaseOrderService.cs(3144,136): warning CS8629: Nullable value type may be null. [/tmp/deployment/backend/Api/eProcurement.Api.csproj]
+  eProcurement.Api -> /tmp/deployment/backend/Api/bin/Release/net8.0/eProcurement.Api.dll
+  eProcurement.Api -> /tmp/deployment/backend/Api/publish/
+[2026-08-14 14:05:02] ✅ Build successful
+[2026-08-14 14:05:02] Backing up current deployment...
+sending incremental file list
+created directory /var/www/eProcurement/backend/../backend_backup_20260814_140244
+./
+BCrypt.Net-Next.dll
+Castle.Core.AsyncInterceptor.dll
+Castle.Core.dll
+ClosedXML.Parser.dll
+ClosedXML.dll
+Dapper.dll
+DocumentFormat.OpenXml.Framework.dll
+DocumentFormat.OpenXml.dll
+DotNetEnv.dll
+EFCore.NamingConventions.dll
+ExcelNumberFormat.dll
+FSharp.Core.dll
+FluentValidation.AspNetCore.dll
+FluentValidation.DependencyInjectionExtensions.dll
+FluentValidation.dll
+Microsoft.AspNetCore.Authentication.JwtBearer.dll
+Microsoft.AspNetCore.OpenApi.dll
+Microsoft.EntityFrameworkCore.Abstractions.dll
+Microsoft.EntityFrameworkCore.Relational.dll
+Microsoft.EntityFrameworkCore.dll
+Microsoft.Extensions.Configuration.Abstractions.dll
+Microsoft.Extensions.Configuration.Binder.dll
+Microsoft.Extensions.Configuration.dll
+Microsoft.Extensions.DependencyInjection.Abstractions.dll
+Microsoft.Extensions.DependencyInjection.dll
+Microsoft.Extensions.DependencyModel.dll
+Microsoft.Extensions.Diagnostics.Abstractions.dll
+Microsoft.Extensions.FileProviders.Abstractions.dll
+Microsoft.Extensions.Hosting.Abstractions.dll
+Microsoft.Extensions.Logging.Abstractions.dll
+Microsoft.Extensions.Logging.dll
+Microsoft.Extensions.Options.dll
+Microsoft.Extensions.Primitives.dll
+Microsoft.IdentityModel.Abstractions.dll
+Microsoft.IdentityModel.JsonWebTokens.dll
+Microsoft.IdentityModel.Logging.dll
+Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+Microsoft.IdentityModel.Protocols.dll
+Microsoft.IdentityModel.Tokens.dll
+Microsoft.OpenApi.dll
+Npgsql.EntityFrameworkCore.PostgreSQL.dll
+Npgsql.dll
+Oracle.ManagedDataAccess.dll
+RBush.dll
+Serilog.AspNetCore.dll
+Serilog.Exceptions.EntityFrameworkCore.dll
+Serilog.Exceptions.dll
+Serilog.Extensions.Hosting.dll
+Serilog.Extensions.Logging.dll
+Serilog.Formatting.Compact.dll
+Serilog.Settings.Configuration.dll
+Serilog.Sinks.Console.dll
+Serilog.Sinks.Debug.dll
+Serilog.Sinks.File.dll
+Serilog.Sinks.Grafana.Loki.dll
+Serilog.Sinks.Postgresql.Alternative.dll
+Serilog.dll
+SixLabors.Fonts.dll
+Superpower.dll
+Swashbuckle.AspNetCore.Swagger.dll
+Swashbuckle.AspNetCore.SwaggerGen.dll
+Swashbuckle.AspNetCore.SwaggerUI.dll
+System.Collections.Immutable.dll
+System.Configuration.ConfigurationManager.dll
+System.Diagnostics.DiagnosticSource.dll
+System.Diagnostics.PerformanceCounter.dll
+System.DirectoryServices.Protocols.dll
+System.IO.Packaging.dll
+System.IO.Pipelines.dll
+System.IdentityModel.Tokens.Jwt.dll
+System.Linq.Dynamic.Core.dll
+System.Security.Cryptography.Pkcs.dll
+System.Security.Cryptography.ProtectedData.dll
+System.Text.Encodings.Web.dll
+System.Text.Json.dll
+appsettings.Development.json
+appsettings.json
+eProcurement.Api
+eProcurement.Api.deps.json
+eProcurement.Api.dll
+eProcurement.Api.pdb
+eProcurement.Api.runtimeconfig.json
+eProcurement.Core.dll
+eProcurement.Core.pdb
+eProcurement.ERPIntegration.dll
+eProcurement.ERPIntegration.pdb
+eProcurement.ERPLighthouseIntegration.dll
+eProcurement.ERPLighthouseIntegration.pdb
+eProcurement.Infrastructure.dll
+eProcurement.Infrastructure.pdb
+eProcurement.MigrationVerifier
+eProcurement.MigrationVerifier.deps.json
+eProcurement.MigrationVerifier.dll
+eProcurement.MigrationVerifier.pdb
+eProcurement.MigrationVerifier.runtimeconfig.json
+web.config
+cs/
+cs/FSharp.Core.resources.dll
+de/
+de/FSharp.Core.resources.dll
+es/
+es/FSharp.Core.resources.dll
+fr/
+fr/FSharp.Core.resources.dll
+it/
+it/FSharp.Core.resources.dll
+ja/
+ja/FSharp.Core.resources.dll
+ko/
+ko/FSharp.Core.resources.dll
+pl/
+pl/FSharp.Core.resources.dll
+pt-BR/
+pt-BR/FSharp.Core.resources.dll
+ru/
+ru/FSharp.Core.resources.dll
+runtimes/
+runtimes/browser/
+runtimes/browser/lib/
+runtimes/browser/lib/net8.0/
+runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+runtimes/linux/
+runtimes/linux/lib/
+runtimes/linux/lib/net8.0/
+runtimes/linux/lib/net8.0/System.DirectoryServices.Protocols.dll
+runtimes/osx/
+runtimes/osx/lib/
+runtimes/osx/lib/net8.0/
+runtimes/osx/lib/net8.0/System.DirectoryServices.Protocols.dll
+runtimes/win/
+runtimes/win/lib/
+runtimes/win/lib/net8.0/
+runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll
+runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll
+runtimes/win/lib/net8.0/System.DirectoryServices.Protocols.dll
+runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+tr/
+tr/FSharp.Core.resources.dll
+zh-Hans/
+zh-Hans/FSharp.Core.resources.dll
+zh-Hant/
+zh-Hant/FSharp.Core.resources.dll
+
+sent 75,839,037 bytes  received 2,485 bytes  50,561,014.67 bytes/sec
+total size is 75,810,268  speedup is 1.00
+[2026-08-14 14:31:11] ✅ Backup saved to: /var/www/eProcurement/backend/../backend_backup_20260814_140244
+[2026-08-14 14:31:11] Deploying to /var/www/eProcurement/backend...
+sending incremental file list
+./
+Quartz.Extensions.DependencyInjection.dll
+Quartz.Extensions.Hosting.dll
+Quartz.dll
+appsettings.Development.json
+appsettings.json
+eProcurement.Api
+eProcurement.Api.deps.json
+eProcurement.Api.dll
+eProcurement.Api.pdb
+eProcurement.Api.runtimeconfig.json
+eProcurement.Core.dll
+eProcurement.Core.pdb
+eProcurement.ERPIntegration.dll
+eProcurement.ERPIntegration.pdb
+eProcurement.ERPLighthouseIntegration.dll
+eProcurement.ERPLighthouseIntegration.pdb
+eProcurement.Infrastructure.dll
+eProcurement.Infrastructure.pdb
+eProcurement.MigrationVerifier
+eProcurement.MigrationVerifier.deps.json
+eProcurement.MigrationVerifier.dll
+eProcurement.MigrationVerifier.pdb
+eProcurement.MigrationVerifier.runtimeconfig.json
+web.config
+cs/
+de/
+es/
+fr/
+it/
+ja/
+ko/
+pl/
+pt-BR/
+ru/
+runtimes/
+runtimes/browser/
+runtimes/browser/lib/
+runtimes/browser/lib/net8.0/
+runtimes/linux/
+runtimes/linux/lib/
+runtimes/linux/lib/net8.0/
+runtimes/osx/
+runtimes/osx/lib/
+runtimes/osx/lib/net8.0/
+runtimes/win/
+runtimes/win/lib/
+runtimes/win/lib/net8.0/
+tr/
+zh-Hans/
+zh-Hant/
+
+sent 51,740,878 bytes  received 583 bytes  103,482,922.00 bytes/sec
+total size is 88,441,146  speedup is 1.71
+[2026-08-14 14:31:11] ✅ Files deployed
+[2026-08-14 14:31:11] Setting deployment ownership...
+[2026-08-14 14:31:11] ✅ Deployment ownership updated to www-data
+[2026-08-14 14:31:11] Copying backend .env...
+[2026-08-14 14:31:11] ✅ .env copied
+[2026-08-14 14:31:11] Restarting eProcurementapi.service...
+[2026-08-14 14:31:11] Waiting up to 60s for migration marker: "Migrations applied successfully"...
+[2026-08-14 14:31:28] ✅ Migration success marker seen after 16s
+[2026-08-14 14:31:28] Checking service status...
+[2026-08-14 14:31:28] ✅ Service is active and ready
+[2026-08-14 14:31:28] ✅ Migration-related log lines extracted to: /opt/deployment/logs/migration-20260814_140244.txt
+[2026-08-14 14:31:28] Running migration verifier...
+[2026-08-14 14:31:33] Migration verifier output appended to: /opt/deployment/logs/migration-20260814_140244.txt
+[2026-08-14 14:31:33] ✅ All migrations applied successfully
+[2026-08-14 14:31:33] Checking API health...
+[2026-08-14 14:31:33] ✅ API health check passed
+[2026-08-14 14:31:33] ✅ All deployment validations passed
+[2026-08-14 14:31:33] Cleaning old backups...
+[2026-08-14 14:31:33] ✅ Old backups cleaned
+[2026-08-14 14:31:33] ==========================================
+[2026-08-14 14:31:33] ✅ BACKEND DEPLOYMENT COMPLETED
+[2026-08-14 14:31:33]   Log saved to:       /opt/deployment/logs/backend-20260814_140244.log
+[2026-08-14 14:31:33]   Migration log:      /opt/deployment/logs/migration-20260814_140244.txt
+[2026-08-14 14:31:33] ==========================================
+[2026-08-14 14:31:33] Cleaning up...
+[2026-08-14 14:31:33] Cleanup done

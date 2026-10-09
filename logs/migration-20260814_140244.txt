@@ -1,0 +1,141 @@
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:                 c.relname='__EFMigrationsHistory'
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       SELECT migration_id, product_version
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       FROM "__EFMigrationsHistory"
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       ORDER BY migration_id;
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]: Applying 31 pending migrations...
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:                 c.relname='__EFMigrationsHistory'
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       SELECT migration_id, product_version
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       FROM "__EFMigrationsHistory"
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       ORDER BY migration_id;
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:                 c.relname='__EFMigrationsHistory'
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:                 c.relname='__EFMigrationsHistory'
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       SELECT migration_id, product_version
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       FROM "__EFMigrationsHistory"
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       ORDER BY migration_id;
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:16.629 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:16 WorldEngine eProcurement-backend[25141]:       Applying migration '20260715101156_POSomeFiledsAllowedNull'.
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:17.103 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]:       Applying migration '20260715121310_EWareHouseAndBusinessType'.
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:17.500 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]:       Applying migration '20260716052317_ReportsBugFixesNFormattingFixes'.
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:17.860 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:17 WorldEngine eProcurement-backend[25141]:       Applying migration '20260716064612_GlobalData_Banner'.
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:18.180 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]:       Applying migration '20260716100644_Announcement'.
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:18.521 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]:       Applying migration '20260717111500_PortalSetting_PRRelated_PRReasonIdAdd_Changes'.
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:18.900 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:18 WorldEngine eProcurement-backend[25141]:       Applying migration '20260720112826_PortalSetting_IsManualPoInsertionAllow'.
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:19.247 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]:       Applying migration '20260720122130_BackLogEntry'.
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:19.599 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]:       Applying migration '20260721090827_PortalConfig_BackWardSetting'.
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:19.893 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:19 WorldEngine eProcurement-backend[25141]:       Applying migration '20260723072118_negotiation_on'.
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:20.192 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]:       Applying migration '20260724044955_Cs_Negotitation'.
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:20.521 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]:       Applying migration '20260725060134_Vendor_Rating_Paramter'.
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:20.822 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:20 WorldEngine eProcurement-backend[25141]:       Applying migration '20260725121252_Schedule_Type'.
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:21.399 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]:       Applying migration '20260727080141_VandorRating'.
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:21.678 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]:       Applying migration '20260727102812_IndentItemAgeingDetail'.
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:21.975 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:21 WorldEngine eProcurement-backend[25141]:       Applying migration '20260727115132_PODocumentLevel'.
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:22.268 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]:       Applying migration '20260728055526_GlobalDataScript_POTwoColumnsAdd'.
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:22.583 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]:       Applying migration '20260728060814_POComunsMandatroy_Category_Document_LevelId'.
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:22.842 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:22 WorldEngine eProcurement-backend[25141]:       Applying migration '20260728080344_AddedSortingRelatedChanges'.
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:23.100 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       Applying migration '20260728095114_MakingIsSortingApplicableNotNull'.
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:23.362 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       Applying migration '20260728102822_ReportSortingUpdate'.
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:23.628 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       Applying migration '20260729074705_VendorRatingRecencyFactor'.
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:23.899 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:23 WorldEngine eProcurement-backend[25141]:       Applying migration '20260730045206_VendroratingItemGroupToGroup'.
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:24.161 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       Applying migration '20260731101119_TransportationRouteLevelIdCHnageToId'.
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:24.425 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       Applying migration '20260804073058_ReportConfig_IsVisibleAdd'.
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:24.699 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       Applying migration '20260804074359_PortaSetting_EmailValidationAdd'.
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:24.971 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:24 WorldEngine eProcurement-backend[25141]:       Applying migration '20260807115909_SupplierType'.
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:25.243 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]:       Applying migration '20260811081054_GlobalData_BudgetType'.
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:25.512 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]:       Applying migration '20260812114343_Auction'.
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:25.858 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:25 WorldEngine eProcurement-backend[25141]:       Applying migration '20260813060129_Budget'.
+Aug 14 14:31:26 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:26 WorldEngine eProcurement-backend[25141]: info: 14/08/2026 14:31:26.584 RelationalEventId.MigrationApplying[20402] (Microsoft.EntityFrameworkCore.Migrations)
+Aug 14 14:31:26 WorldEngine eProcurement-backend[25141]:       Applying migration '20260813115836_IndentAgeingNIndentDetailUpdate'.
+Aug 14 14:31:26 WorldEngine eProcurement-backend[25141]:       INSERT INTO "__EFMigrationsHistory" (migration_id, product_version)
+Aug 14 14:31:26 WorldEngine eProcurement-backend[25141]: Migrations applied successfully.
+
+===== Migration Verifier Output =====
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10400]
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+warn: 8/14/2026 14:31:32.327 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1 FROM pg_catalog.pg_class c
+          JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+          WHERE n.nspname='public' AND
+                c.relname='__EFMigrationsHistory'
+      )
+info: 8/14/2026 14:31:33.254 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1 FROM pg_catalog.pg_class c
+          JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+          WHERE n.nspname='public' AND
+                c.relname='__EFMigrationsHistory'
+      )
+info: 8/14/2026 14:31:33.265 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT migration_id, product_version
+      FROM "__EFMigrationsHistory"
+      ORDER BY migration_id;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT migration_id, product_version
+      FROM "__EFMigrationsHistory"
+      ORDER BY migration_id;
+Database is up to date.
